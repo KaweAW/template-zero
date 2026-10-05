@@ -1,0 +1,34 @@
+{
+  "de": {
+    "title": "Etwas ist schiefgelaufen",
+    "body": "Bitte versuchen Sie es erneut. Wenn das Problem bleibt, rufen Sie uns an.",
+    "retry": "Erneut versuchen",
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundBody": "Die gesuchte Seite gibt es nicht.",
+    "backHome": "Zur Startseite"
+  },
+  "en": {
+    "title": "Something went wrong",
+    "body": "Please try again. If the problem continues, call us.",
+    "retry": "Try again",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you are looking for does not exist.",
+    "backHome": "Back to the homepage"
+  },
+  "it": {
+    "title": "Qualcosa è andato storto",
+    "body": "Riprova. Se il problema continua, chiamaci.",
+    "retry": "Riprova",
+    "notFoundTitle": "Pagina non trovata",
+    "notFoundBody": "La pagina che cerchi non esiste.",
+    "backHome": "Torna alla home"
+  },
+  "fr": {
+    "title": "Un problème est survenu",
+    "body": "Réessayez. Si le problème persiste, appelez-nous.",
+    "retry": "Réessayer",
+    "notFoundTitle": "Page introuvable",
+    "notFoundBody": "La page que vous cherchez n’existe pas.",
+    "backHome": "Retour à l’accueil"
+  }
+}

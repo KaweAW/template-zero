@@ -1,0 +1,177 @@
+{
+  "common": {
+    "skipToContent": "Vai al contenuto",
+    "menu": "Menu",
+    "reserve": "Prenota un tavolo",
+    "reserveShort": "Prenota",
+    "contact": "Contatti",
+    "call": "Chiamaci",
+    "whatsapp": "WhatsApp",
+    "whatsappPrefill": "Ciao {name}, vorrei informazioni per un tavolo."
+  },
+  "nav": {
+    "main": "Navigazione principale",
+    "actions": "Azioni rapide",
+    "home": "Home",
+    "menu": "Menu",
+    "reserve": "Prenota",
+    "contact": "Contatti"
+  },
+  "languageSwitcher": {
+    "label": "Lingua"
+  },
+  "hours": {
+    "title": "Orari di apertura",
+    "open": "Aperto ora",
+    "closingSoon": "Chiude a breve",
+    "closed": "Chiuso",
+    "closedAllDay": "Chiuso",
+    "closesAt": "Chiude alle {time}",
+    "opensToday": "Riapre oggi alle {time}",
+    "opensTomorrow": "Riapre domani alle {time}",
+    "opensOn": "Riapre {day} alle {time}"
+  },
+  "home": {
+    "ctaMenu": "Guarda il menu",
+    "ctaReserve": "Prenota un tavolo",
+    "featuredTitle": "Dalla cucina",
+    "featuredIntro": "Alcuni piatti per cui i nostri ospiti tornano.",
+    "fullMenu": "Menu completo",
+    "visitTitle": "Passa a trovarci",
+    "reserveBandTitle": "Vuoi venire a trovarci?",
+    "reserveBandText": "Inviaci una richiesta e ti confermiamo il tavolo."
+  },
+  "menu": {
+    "title": "Menu",
+    "sections": "Sezioni del menu",
+    "allergens": "Allergeni",
+    "noResults": "Nessun piatto corrisponde a questi filtri.",
+    "results": "{count, plural, one {# piatto mostrato} other {# piatti mostrati}}",
+    "filters": {
+      "label": "Filtra i piatti",
+      "vegetarian": "Vegetariano",
+      "vegan": "Vegano",
+      "glutenFree": "Senza glutine",
+      "lactoseFree": "Senza lattosio",
+      "spicy": "Piccante",
+      "clear": "Mostra tutto"
+    },
+    "tagsShort": {
+      "vegetarian": "V",
+      "vegan": "VG",
+      "glutenFree": "SG",
+      "lactoseFree": "SL",
+      "spicy": "Piccante"
+    },
+    "allergenNames": {
+      "gluten": "Glutine",
+      "crustaceans": "Crostacei",
+      "eggs": "Uova",
+      "fish": "Pesce",
+      "peanuts": "Arachidi",
+      "soy": "Soia",
+      "milk": "Latte",
+      "nuts": "Frutta a guscio",
+      "celery": "Sedano",
+      "mustard": "Senape",
+      "sesame": "Sesamo",
+      "sulphites": "Solfiti",
+      "lupin": "Lupini",
+      "molluscs": "Molluschi"
+    }
+  },
+  "reservation": {
+    "title": "Prenota un tavolo",
+    "intro": "Inviaci una richiesta. Confermiamo per telefono o email, di solito entro poche ore.",
+    "name": "Nome",
+    "phone": "Telefono",
+    "email": "Email",
+    "contactHint": "Indica un telefono o un’email per permetterci di confermare.",
+    "date": "Data",
+    "time": "Orario",
+    "pickDateFirst": "Scegli una data per vedere gli orari disponibili",
+    "selectTime": "Scegli un orario",
+    "partySize": "Persone",
+    "guests": "{count, plural, one {# persona} other {# persone}}",
+    "notes": "Note (facoltative)",
+    "notesHint": "Allergie, seggiolone, occasione",
+    "closedThatDay": "Quel giorno siamo chiusi. Scegli un’altra data.",
+    "noSlots": "Nessun orario disponibile per questa data. Scegli un’altra data.",
+    "largeGroup": "Per più di {max} persone, chiamaci al {phone}.",
+    "submit": "Invia richiesta",
+    "submitting": "Invio in corso",
+    "successTitle": "Richiesta inviata",
+    "successBody": "Grazie, {name}. Abbiamo ricevuto la tua richiesta per {guests} il {date} alle {time} e ti confermeremo a breve.",
+    "newRequest": "Invia un’altra richiesta",
+    "errorTitle": "Non siamo riusciti a inviare la richiesta",
+    "errorBody": "Riprova, oppure contattaci direttamente per telefono o WhatsApp.",
+    "or": "oppure",
+    "whatsappCta": "Chiedi su WhatsApp",
+    "whatsappMessage": "Ciao {venue}, vorrei prenotare un tavolo per {guests} il {date} alle {time}. Nome: {name}."
+  },
+  "validation": {
+    "nameRequired": "Inserisci il tuo nome.",
+    "nameTooLong": "Il nome è troppo lungo.",
+    "phoneInvalid": "Inserisci un numero di telefono valido.",
+    "emailInvalid": "Inserisci un indirizzo email valido.",
+    "contactRequired": "Inserisci un telefono o un’email.",
+    "dateRequired": "Scegli una data.",
+    "dateInvalid": "Scegli un giorno in cui siamo aperti.",
+    "timeRequired": "Scegli un orario.",
+    "partySizeInvalid": "Scegli il numero di persone.",
+    "notesTooLong": "La nota è troppo lunga (massimo 500 caratteri)."
+  },
+  "contact": {
+    "title": "Dove siamo",
+    "intro": "Passa a trovarci o scrivici: rispondiamo volentieri.",
+    "address": "Indirizzo",
+    "phone": "Telefono",
+    "email": "Email",
+    "hours": "Orari di apertura",
+    "map": "Mappa",
+    "loadMap": "Mostra la mappa",
+    "mapNotice": "Mostrando la mappa vengono caricati contenuti da Google e il tuo indirizzo IP viene condiviso con Google.",
+    "directions": "Indicazioni stradali",
+    "follow": "Seguici",
+    "whatsappCta": "Scrivici su WhatsApp"
+  },
+  "footer": {
+    "copyright": "© {year} {name}",
+    "imprint": "Note legali",
+    "privacy": "Informativa sulla privacy",
+    "hours": "Orari",
+    "contact": "Contatti"
+  },
+  "email": {
+    "ownerSubject": "Nuova richiesta di prenotazione: {name}, {guests} il {date} alle {time}",
+    "ownerIntro": "Un ospite ha inviato una richiesta di prenotazione dal tuo sito.",
+    "customerSubject": "La tua richiesta da {venue}",
+    "customerBody": "Ciao {name},\n\nabbiamo ricevuto la tua richiesta per {guests} il {date} alle {time}. Non è ancora una prenotazione confermata: ti risponderemo il prima possibile.\n\nSe i tuoi programmi cambiano, chiamaci al {phone}.\n\n{venue}"
+  },
+  "seo": {
+    "menuTitle": "Menu",
+    "menuDescription": "Il menu completo di {name} con prezzi, allergeni e opzioni vegetariane.",
+    "reserveTitle": "Prenota un tavolo",
+    "reserveDescription": "Richiedi un tavolo da {name}. Confermiamo per telefono o email.",
+    "contactTitle": "Contatti e orari",
+    "contactDescription": "Indirizzo, orari di apertura e indicazioni per raggiungere {name}."
+  },
+  "caseStudy": {
+    "title": "Case study",
+    "badge": "Dati di esempio",
+    "badgeText": "Cifre illustrative per questa demo. Non provengono da un cliente reale.",
+    "intro": "Cosa cambia quando un locale passa da un menu in PDF a un sito veloce con un menu consultabile.",
+    "before": "Prima",
+    "after": "Dopo",
+    "metrics": {
+      "lighthouse": "Punteggio Lighthouse mobile",
+      "lcp": "Largest Contentful Paint",
+      "cls": "Spostamento del layout (CLS)",
+      "menuReady": "Tempo prima di poter leggere il menu in 4G"
+    },
+    "changesTitle": "Cosa cambia per l’ospite",
+    "changeMenu": "Il menu si apre subito e si legge bene dal telefono.",
+    "changeReserve": "Chiedere un tavolo richiede un minuto, senza telefonare.",
+    "changeQr": "Lo stesso menu è sul tavolo, a un codice QR di distanza."
+  }
+}

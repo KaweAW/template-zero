@@ -1,0 +1,177 @@
+{
+  "common": {
+    "skipToContent": "Aller au contenu",
+    "menu": "Carte",
+    "reserve": "Réserver une table",
+    "reserveShort": "Réserver",
+    "contact": "Contact",
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "whatsappPrefill": "Bonjour {name}, je voudrais des informations pour une table."
+  },
+  "nav": {
+    "main": "Navigation principale",
+    "actions": "Actions rapides",
+    "home": "Accueil",
+    "menu": "Carte",
+    "reserve": "Réserver",
+    "contact": "Contact"
+  },
+  "languageSwitcher": {
+    "label": "Langue"
+  },
+  "hours": {
+    "title": "Horaires d’ouverture",
+    "open": "Ouvert maintenant",
+    "closingSoon": "Ferme bientôt",
+    "closed": "Fermé",
+    "closedAllDay": "Fermé",
+    "closesAt": "Ferme à {time}",
+    "opensToday": "Ouvre aujourd’hui à {time}",
+    "opensTomorrow": "Ouvre demain à {time}",
+    "opensOn": "Ouvre {day} à {time}"
+  },
+  "home": {
+    "ctaMenu": "Voir la carte",
+    "ctaReserve": "Réserver une table",
+    "featuredTitle": "Depuis la cuisine",
+    "featuredIntro": "Quelques plats pour lesquels nos clients reviennent.",
+    "fullMenu": "Toute la carte",
+    "visitTitle": "Venez nous voir",
+    "reserveBandTitle": "Envie de passer nous voir ?",
+    "reserveBandText": "Envoyez-nous une demande, nous confirmons votre table."
+  },
+  "menu": {
+    "title": "Carte",
+    "sections": "Rubriques de la carte",
+    "allergens": "Allergènes",
+    "noResults": "Aucun plat ne correspond à ces filtres.",
+    "results": "{count, plural, one {# plat affiché} other {# plats affichés}}",
+    "filters": {
+      "label": "Filtrer les plats",
+      "vegetarian": "Végétarien",
+      "vegan": "Vegan",
+      "glutenFree": "Sans gluten",
+      "lactoseFree": "Sans lactose",
+      "spicy": "Épicé",
+      "clear": "Tout afficher"
+    },
+    "tagsShort": {
+      "vegetarian": "V",
+      "vegan": "VG",
+      "glutenFree": "SG",
+      "lactoseFree": "SL",
+      "spicy": "Épicé"
+    },
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Crustacés",
+      "eggs": "Œufs",
+      "fish": "Poisson",
+      "peanuts": "Arachides",
+      "soy": "Soja",
+      "milk": "Lait",
+      "nuts": "Fruits à coque",
+      "celery": "Céleri",
+      "mustard": "Moutarde",
+      "sesame": "Sésame",
+      "sulphites": "Sulfites",
+      "lupin": "Lupin",
+      "molluscs": "Mollusques"
+    }
+  },
+  "reservation": {
+    "title": "Réserver une table",
+    "intro": "Envoyez-nous une demande. Nous confirmons par téléphone ou par e-mail, en général en quelques heures.",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "contactHint": "Indiquez un téléphone ou un e-mail pour que nous puissions confirmer.",
+    "date": "Date",
+    "time": "Heure",
+    "pickDateFirst": "Choisissez une date pour voir les horaires disponibles",
+    "selectTime": "Choisir une heure",
+    "partySize": "Personnes",
+    "guests": "{count, plural, one {# personne} other {# personnes}}",
+    "notes": "Remarques (facultatif)",
+    "notesHint": "Allergies, chaise haute, occasion",
+    "closedThatDay": "Nous sommes fermés ce jour-là. Choisissez une autre date.",
+    "noSlots": "Aucun horaire disponible pour cette date. Choisissez une autre date.",
+    "largeGroup": "Au-delà de {max} personnes, appelez-nous au {phone}.",
+    "submit": "Envoyer la demande",
+    "submitting": "Envoi en cours",
+    "successTitle": "Demande envoyée",
+    "successBody": "Merci, {name}. Nous avons bien reçu votre demande pour {guests} le {date} à {time} et nous vous répondrons rapidement.",
+    "newRequest": "Envoyer une autre demande",
+    "errorTitle": "Votre demande n’a pas pu être envoyée",
+    "errorBody": "Réessayez, ou contactez-nous directement par téléphone ou WhatsApp.",
+    "or": "ou",
+    "whatsappCta": "Demander par WhatsApp",
+    "whatsappMessage": "Bonjour {venue}, je souhaite réserver une table pour {guests} le {date} à {time}. Nom : {name}."
+  },
+  "validation": {
+    "nameRequired": "Indiquez votre nom.",
+    "nameTooLong": "Le nom est trop long.",
+    "phoneInvalid": "Indiquez un numéro de téléphone valide.",
+    "emailInvalid": "Indiquez une adresse e-mail valide.",
+    "contactRequired": "Indiquez un téléphone ou un e-mail.",
+    "dateRequired": "Choisissez une date.",
+    "dateInvalid": "Choisissez un jour d’ouverture.",
+    "timeRequired": "Choisissez une heure.",
+    "partySizeInvalid": "Choisissez le nombre de personnes.",
+    "notesTooLong": "La remarque est trop longue (500 caractères au maximum)."
+  },
+  "contact": {
+    "title": "Nous trouver",
+    "intro": "Passez nous voir ou écrivez-nous. Nous répondons avec plaisir.",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "hours": "Horaires d’ouverture",
+    "map": "Carte",
+    "loadMap": "Afficher la carte",
+    "mapNotice": "L’affichage de la carte charge du contenu depuis Google et transmet votre adresse IP à Google.",
+    "directions": "Itinéraire",
+    "follow": "Suivez-nous",
+    "whatsappCta": "Écrire sur WhatsApp"
+  },
+  "footer": {
+    "copyright": "© {year} {name}",
+    "imprint": "Mentions légales",
+    "privacy": "Confidentialité",
+    "hours": "Horaires",
+    "contact": "Contact"
+  },
+  "email": {
+    "ownerSubject": "Nouvelle demande de réservation : {name}, {guests} le {date} à {time}",
+    "ownerIntro": "Un client a envoyé une demande de réservation depuis votre site.",
+    "customerSubject": "Votre demande chez {venue}",
+    "customerBody": "Bonjour {name},\n\nnous avons bien reçu votre demande pour {guests} le {date} à {time}. Ce n’est pas encore une réservation confirmée : nous vous répondrons dès que possible.\n\nSi vos plans changent, appelez-nous au {phone}.\n\n{venue}"
+  },
+  "seo": {
+    "menuTitle": "Carte",
+    "menuDescription": "La carte complète de {name} avec les prix, les allergènes et les plats végétariens.",
+    "reserveTitle": "Réserver une table",
+    "reserveDescription": "Demandez une table chez {name}. Nous confirmons par téléphone ou par e-mail.",
+    "contactTitle": "Contact et horaires",
+    "contactDescription": "Adresse, horaires d’ouverture et itinéraire pour {name}."
+  },
+  "caseStudy": {
+    "title": "Étude de cas",
+    "badge": "Données d’exemple",
+    "badgeText": "Chiffres illustratifs pour cette démo. Ils ne proviennent pas d’un vrai client.",
+    "intro": "Ce qui change quand un établissement passe d’une carte en PDF à un site rapide avec une carte consultable.",
+    "before": "Avant",
+    "after": "Après",
+    "metrics": {
+      "lighthouse": "Score Lighthouse mobile",
+      "lcp": "Largest Contentful Paint",
+      "cls": "Décalage de mise en page (CLS)",
+      "menuReady": "Délai avant de pouvoir lire la carte en 4G"
+    },
+    "changesTitle": "Ce qui change pour le client",
+    "changeMenu": "La carte s’ouvre tout de suite et se lit bien sur un téléphone.",
+    "changeReserve": "Demander une table prend une minute, sans appel.",
+    "changeQr": "La même carte est sur la table, à un QR code de distance."
+  }
+}

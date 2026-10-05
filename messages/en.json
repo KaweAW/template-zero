@@ -1,0 +1,177 @@
+{
+  "common": {
+    "skipToContent": "Skip to content",
+    "menu": "Menu",
+    "reserve": "Reserve a table",
+    "reserveShort": "Reserve",
+    "contact": "Contact",
+    "call": "Call us",
+    "whatsapp": "WhatsApp",
+    "whatsappPrefill": "Hello {name}, I would like to ask about a table."
+  },
+  "nav": {
+    "main": "Main navigation",
+    "actions": "Quick actions",
+    "home": "Home",
+    "menu": "Menu",
+    "reserve": "Reserve",
+    "contact": "Contact"
+  },
+  "languageSwitcher": {
+    "label": "Language"
+  },
+  "hours": {
+    "title": "Opening hours",
+    "open": "Open now",
+    "closingSoon": "Closing soon",
+    "closed": "Closed",
+    "closedAllDay": "Closed",
+    "closesAt": "Closes at {time}",
+    "opensToday": "Opens today at {time}",
+    "opensTomorrow": "Opens tomorrow at {time}",
+    "opensOn": "Opens {day} at {time}"
+  },
+  "home": {
+    "ctaMenu": "See the menu",
+    "ctaReserve": "Reserve a table",
+    "featuredTitle": "From the kitchen",
+    "featuredIntro": "A few dishes our guests come back for.",
+    "fullMenu": "Full menu",
+    "visitTitle": "Come by",
+    "reserveBandTitle": "Planning a visit?",
+    "reserveBandText": "Send us a request and we will confirm your table."
+  },
+  "menu": {
+    "title": "Menu",
+    "sections": "Menu sections",
+    "allergens": "Allergens",
+    "noResults": "No dishes match these filters.",
+    "results": "{count, plural, one {# dish shown} other {# dishes shown}}",
+    "filters": {
+      "label": "Filter dishes",
+      "vegetarian": "Vegetarian",
+      "vegan": "Vegan",
+      "glutenFree": "Gluten-free",
+      "lactoseFree": "Lactose-free",
+      "spicy": "Spicy",
+      "clear": "Show everything"
+    },
+    "tagsShort": {
+      "vegetarian": "V",
+      "vegan": "VG",
+      "glutenFree": "GF",
+      "lactoseFree": "LF",
+      "spicy": "Spicy"
+    },
+    "allergenNames": {
+      "gluten": "Gluten",
+      "crustaceans": "Crustaceans",
+      "eggs": "Eggs",
+      "fish": "Fish",
+      "peanuts": "Peanuts",
+      "soy": "Soy",
+      "milk": "Milk",
+      "nuts": "Tree nuts",
+      "celery": "Celery",
+      "mustard": "Mustard",
+      "sesame": "Sesame",
+      "sulphites": "Sulphites",
+      "lupin": "Lupin",
+      "molluscs": "Molluscs"
+    }
+  },
+  "reservation": {
+    "title": "Reserve a table",
+    "intro": "Send us a request. We confirm by phone or email, usually within a few hours.",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "contactHint": "Add a phone number or an email so we can confirm.",
+    "date": "Date",
+    "time": "Time",
+    "pickDateFirst": "Pick a date to see the available times",
+    "selectTime": "Select a time",
+    "partySize": "Guests",
+    "guests": "{count, plural, one {# guest} other {# guests}}",
+    "notes": "Notes (optional)",
+    "notesHint": "Allergies, high chair, occasion",
+    "closedThatDay": "We are closed on that day. Please pick another date.",
+    "noSlots": "No times available for this date. Please pick another date.",
+    "largeGroup": "For more than {max} guests, please call us on {phone}.",
+    "submit": "Send request",
+    "submitting": "Sending",
+    "successTitle": "Request sent",
+    "successBody": "Thank you, {name}. We received your request for {guests} on {date} at {time} and will confirm shortly.",
+    "newRequest": "Send another request",
+    "errorTitle": "We could not send your request",
+    "errorBody": "Please try again, or reach us directly by phone or WhatsApp.",
+    "or": "or",
+    "whatsappCta": "Ask on WhatsApp",
+    "whatsappMessage": "Hello {venue}, I would like to reserve a table for {guests} on {date} at {time}. Name: {name}."
+  },
+  "validation": {
+    "nameRequired": "Enter your name.",
+    "nameTooLong": "The name is too long.",
+    "phoneInvalid": "Enter a valid phone number.",
+    "emailInvalid": "Enter a valid email address.",
+    "contactRequired": "Enter a phone number or an email.",
+    "dateRequired": "Pick a date.",
+    "dateInvalid": "Pick a date we are open.",
+    "timeRequired": "Pick a time.",
+    "partySizeInvalid": "Choose the number of guests.",
+    "notesTooLong": "The note is too long (500 characters at most)."
+  },
+  "contact": {
+    "title": "Find us",
+    "intro": "Come by or get in touch. We are happy to help.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening hours",
+    "map": "Map",
+    "loadMap": "Show the map",
+    "mapNotice": "Showing the map loads content from Google and shares your IP address with Google.",
+    "directions": "Get directions",
+    "follow": "Follow us",
+    "whatsappCta": "Message us on WhatsApp"
+  },
+  "footer": {
+    "copyright": "© {year} {name}",
+    "imprint": "Imprint",
+    "privacy": "Privacy policy",
+    "hours": "Hours",
+    "contact": "Contact"
+  },
+  "email": {
+    "ownerSubject": "New reservation request: {name}, {guests} on {date} at {time}",
+    "ownerIntro": "A guest sent a reservation request through your website.",
+    "customerSubject": "Your request at {venue}",
+    "customerBody": "Hello {name},\n\nwe received your request for {guests} on {date} at {time}. This is not a confirmed booking yet. We will get back to you as soon as possible.\n\nIf your plans change, please call us on {phone}.\n\n{venue}"
+  },
+  "seo": {
+    "menuTitle": "Menu",
+    "menuDescription": "The full menu of {name} with prices, allergens and vegetarian options.",
+    "reserveTitle": "Reserve a table",
+    "reserveDescription": "Request a table at {name}. We confirm by phone or email.",
+    "contactTitle": "Contact and opening hours",
+    "contactDescription": "Address, opening hours and directions for {name}."
+  },
+  "caseStudy": {
+    "title": "Case study",
+    "badge": "Sample data",
+    "badgeText": "Illustrative figures for this demo. They do not come from a real client.",
+    "intro": "What changes when a venue moves from a PDF menu to a fast website with a searchable menu.",
+    "before": "Before",
+    "after": "After",
+    "metrics": {
+      "lighthouse": "Lighthouse mobile score",
+      "lcp": "Largest Contentful Paint",
+      "cls": "Layout shift (CLS)",
+      "menuReady": "Time until the menu is readable on 4G"
+    },
+    "changesTitle": "What changes for the guest",
+    "changeMenu": "The menu opens at once and reads well on a phone.",
+    "changeReserve": "Asking for a table takes a minute and needs no phone call.",
+    "changeQr": "The same menu is on the table, one QR code away."
+  }
+}
