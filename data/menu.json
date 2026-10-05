@@ -1,0 +1,115 @@
+{
+  "categories": [
+    {
+      "id": "antipasti",
+      "items": [
+        { "id": "bruschetta", "price": 8.5, "tags": ["vegan"], "allergens": ["gluten"] },
+        {
+          "id": "burrata",
+          "price": 13.9,
+          "tags": ["vegetarian", "glutenFree"],
+          "allergens": ["milk"],
+          "image": "/images/dishes/burrata.webp",
+          "featured": true
+        },
+        { "id": "carpaccio", "price": 15.5, "tags": ["glutenFree"], "allergens": ["milk"] },
+        { "id": "calamari-fritti", "price": 14.5, "tags": [], "allergens": ["gluten", "molluscs"] }
+      ]
+    },
+    {
+      "id": "primi",
+      "items": [
+        {
+          "id": "cacio-e-pepe",
+          "price": 14.9,
+          "tags": ["vegetarian"],
+          "allergens": ["gluten", "milk"]
+        },
+        {
+          "id": "tagliatelle-ragu",
+          "price": 15.9,
+          "tags": [],
+          "allergens": ["gluten", "eggs", "celery"],
+          "image": "/images/dishes/tagliatelle-ragu.webp",
+          "featured": true
+        },
+        {
+          "id": "gnocchi-gorgonzola",
+          "price": 15.5,
+          "tags": ["vegetarian"],
+          "allergens": ["gluten", "milk", "nuts"]
+        },
+        {
+          "id": "risotto-porcini",
+          "price": 17.5,
+          "tags": ["vegetarian", "glutenFree"],
+          "allergens": ["milk", "celery"]
+        }
+      ]
+    },
+    {
+      "id": "secondi",
+      "items": [
+        {
+          "id": "saltimbocca",
+          "price": 24.9,
+          "tags": [],
+          "allergens": ["gluten", "milk"],
+          "image": "/images/dishes/saltimbocca.webp",
+          "featured": true
+        },
+        { "id": "branzino", "price": 27.5, "tags": ["glutenFree"], "allergens": ["fish"] },
+        {
+          "id": "parmigiana",
+          "price": 16.9,
+          "tags": ["vegetarian", "glutenFree"],
+          "allergens": ["milk", "celery"]
+        }
+      ]
+    },
+    {
+      "id": "pizze",
+      "items": [
+        {
+          "id": "margherita",
+          "price": 11.5,
+          "tags": ["vegetarian"],
+          "allergens": ["gluten", "milk"]
+        },
+        {
+          "id": "diavola",
+          "price": 14,
+          "tags": ["spicy"],
+          "allergens": ["gluten", "milk"]
+        }
+      ]
+    },
+    {
+      "id": "dolci",
+      "items": [
+        {
+          "id": "tiramisu",
+          "price": 7.9,
+          "tags": ["vegetarian"],
+          "allergens": ["gluten", "eggs", "milk"],
+          "image": "/images/dishes/tiramisu.webp",
+          "featured": true
+        },
+        {
+          "id": "panna-cotta",
+          "price": 7.5,
+          "tags": ["vegetarian", "glutenFree"],
+          "allergens": ["milk"]
+        }
+      ]
+    },
+    {
+      "id": "bevande",
+      "items": [
+        { "id": "aperol-spritz", "price": 8.9, "tags": [], "allergens": ["sulphites"] },
+        { "id": "vino-della-casa", "price": 6.5, "tags": [], "allergens": ["sulphites"] },
+        { "id": "espresso", "price": 2.8, "tags": ["vegan", "glutenFree"], "allergens": [] }
+      ]
+    }
+  ]
+}

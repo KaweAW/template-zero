@@ -1,0 +1,79 @@
+{
+  "note": "All prices in euros, VAT included. If you have allergies or intolerances, please ask our team.",
+  "categories": {
+    "antipasti": "Starters",
+    "primi": "Pasta & rice",
+    "secondi": "Mains",
+    "pizze": "Pizza",
+    "dolci": "Desserts",
+    "bevande": "Drinks"
+  },
+  "items": {
+    "bruschetta": {
+      "name": "Bruschetta al pomodoro",
+      "description": "Toasted bread, cherry tomatoes, basil and extra virgin olive oil"
+    },
+    "burrata": { "name": "Burrata", "description": "Burrata from Puglia, ripe tomatoes, basil" },
+    "carpaccio": {
+      "name": "Carpaccio di manzo",
+      "description": "Thinly sliced raw beef, rocket, shaved Parmesan"
+    },
+    "calamari-fritti": {
+      "name": "Calamari fritti",
+      "description": "Squid rings in a light batter, lemon"
+    },
+    "cacio-e-pepe": {
+      "name": "Spaghetti cacio e pepe",
+      "description": "Pecorino romano and black pepper, nothing else"
+    },
+    "tagliatelle-ragu": {
+      "name": "Tagliatelle al ragù",
+      "description": "Homemade egg pasta, beef ragù simmered for three hours"
+    },
+    "gnocchi-gorgonzola": {
+      "name": "Gnocchi al gorgonzola",
+      "description": "Potato gnocchi, gorgonzola cream, walnuts"
+    },
+    "risotto-porcini": {
+      "name": "Risotto ai porcini",
+      "description": "Carnaroli rice, porcini mushrooms, butter and Parmesan"
+    },
+    "saltimbocca": {
+      "name": "Saltimbocca alla romana",
+      "description": "Veal, cured ham and sage, white wine sauce, roast potatoes"
+    },
+    "branzino": {
+      "name": "Branzino al forno",
+      "description": "Whole sea bass baked with lemon, herbs and seasonal vegetables"
+    },
+    "parmigiana": {
+      "name": "Parmigiana di melanzane",
+      "description": "Aubergine, tomato, mozzarella and Parmesan, baked until golden"
+    },
+    "margherita": {
+      "name": "Margherita",
+      "description": "San Marzano tomato, fior di latte mozzarella, basil"
+    },
+    "diavola": {
+      "name": "Diavola",
+      "description": "Tomato, mozzarella, spicy salami, chilli"
+    },
+    "tiramisu": {
+      "name": "Tiramisù",
+      "description": "The classic with mascarpone, ladyfingers and coffee"
+    },
+    "panna-cotta": {
+      "name": "Panna cotta",
+      "description": "Vanilla panna cotta with berry coulis"
+    },
+    "aperol-spritz": {
+      "name": "Aperol Spritz",
+      "description": "Aperol, prosecco, soda and an orange slice"
+    },
+    "vino-della-casa": {
+      "name": "House wine (0.2 l)",
+      "description": "Red or white, ask your server"
+    },
+    "espresso": { "name": "Espresso", "description": "Small-batch roasted blend" }
+  }
+}

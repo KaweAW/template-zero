@@ -1,0 +1,75 @@
+{
+  "name": "Trattoria da Marco",
+  "type": "Restaurant",
+  "siteUrl": "https://trattoria-da-marco.example",
+  "locales": ["de", "en", "it", "fr"],
+  "defaultLocale": "de",
+  "currency": "EUR",
+  "timezone": "Europe/Berlin",
+  "cuisine": ["Italian", "Pasta", "Pizza"],
+  "priceRange": "€€",
+  "logo": null,
+  "colors": {
+    "primary": "#1E4636",
+    "accent": "#C8402A",
+    "background": "#FBFBF7",
+    "surface": "#EEF1E8",
+    "foreground": "#18241D"
+  },
+  "images": {
+    "hero": "/images/hero.webp",
+    "og": "/images/og.jpg"
+  },
+  "contact": {
+    "phone": "+49 89 123456",
+    "whatsapp": "+4915112345678",
+    "email": "info@trattoria-da-marco.example",
+    "address": {
+      "street": "Musterstraße 12",
+      "postalCode": "80331",
+      "city": "München",
+      "region": "Bayern",
+      "country": "DE"
+    },
+    "geo": { "lat": 48.1374, "lng": 11.5755 }
+  },
+  "hours": {
+    "mon": [],
+    "tue": [
+      { "open": "11:30", "close": "14:30" },
+      { "open": "17:30", "close": "22:30" }
+    ],
+    "wed": [
+      { "open": "11:30", "close": "14:30" },
+      { "open": "17:30", "close": "22:30" }
+    ],
+    "thu": [
+      { "open": "11:30", "close": "14:30" },
+      { "open": "17:30", "close": "22:30" }
+    ],
+    "fri": [
+      { "open": "11:30", "close": "14:30" },
+      { "open": "17:30", "close": "23:00" }
+    ],
+    "sat": [{ "open": "12:00", "close": "23:00" }],
+    "sun": [{ "open": "12:00", "close": "21:30" }]
+  },
+  "reservation": {
+    "mode": "both",
+    "maxPartySize": 10,
+    "advanceDays": 60,
+    "slotMinutes": 30,
+    "lastSlotBeforeClose": 60,
+    "minNoticeMinutes": 60,
+    "sendCustomerConfirmation": true
+  },
+  "social": {},
+  "legal": {},
+  "analytics": {
+    "vercel": true,
+    "plausibleDomain": null
+  },
+  "features": {
+    "caseStudy": true
+  }
+}

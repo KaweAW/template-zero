@@ -1,0 +1,16 @@
+{
+  "tagline": "Une cuisine italienne sincère au cœur de Munich",
+  "seoDescription": "Trattoria da Marco à Munich : pâtes fraîches, pizzas et classiques italiens. Découvrez la carte et demandez une table en ligne.",
+  "hero": {
+    "title": "Des pâtes comme la grand-mère de Marco",
+    "subtitle": "Pâtes fraîches, classiques romains et un verre de vin à table.",
+    "imageAlt": "Table dressée avec une nappe à carreaux, une assiette, des couverts et un verre de vin"
+  },
+  "about": {
+    "title": "Une table pour tous",
+    "paragraphs": [
+      "Marco cuisine ce qu'il a toujours mangé chez lui : des pâtes fraîches chaque matin, des sauces qui mijotent des heures et des produits qu'il goûte volontiers lui-même.",
+      "Un déjeuner rapide ou une longue soirée entre amis : il y a toujours une place pour vous. La carte est aussi sur chaque table, il suffit de scanner le QR code."
+    ]
+  }
+}

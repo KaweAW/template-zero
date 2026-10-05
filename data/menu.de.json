@@ -1,0 +1,82 @@
+{
+  "note": "Alle Preise in Euro inkl. MwSt. Bei Allergien oder Unverträglichkeiten fragen Sie bitte unser Team.",
+  "categories": {
+    "antipasti": "Vorspeisen",
+    "primi": "Pasta & Risotto",
+    "secondi": "Hauptgerichte",
+    "pizze": "Pizza",
+    "dolci": "Nachspeisen",
+    "bevande": "Getränke"
+  },
+  "items": {
+    "bruschetta": {
+      "name": "Bruschetta al pomodoro",
+      "description": "Geröstetes Brot, Kirschtomaten, Basilikum und natives Olivenöl extra"
+    },
+    "burrata": {
+      "name": "Burrata",
+      "description": "Burrata aus Apulien, reife Tomaten, Basilikum"
+    },
+    "carpaccio": {
+      "name": "Carpaccio di manzo",
+      "description": "Dünn geschnittenes rohes Rindfleisch, Rucola, Parmesanspäne"
+    },
+    "calamari-fritti": {
+      "name": "Calamari fritti",
+      "description": "Tintenfischringe im leichten Ausbackteig, Zitrone"
+    },
+    "cacio-e-pepe": {
+      "name": "Spaghetti cacio e pepe",
+      "description": "Pecorino romano und schwarzer Pfeffer, mehr nicht"
+    },
+    "tagliatelle-ragu": {
+      "name": "Tagliatelle al ragù",
+      "description": "Hausgemachte Eiernudeln, Rinderragù, drei Stunden geschmort"
+    },
+    "gnocchi-gorgonzola": {
+      "name": "Gnocchi al gorgonzola",
+      "description": "Kartoffelgnocchi, Gorgonzolasauce, Walnüsse"
+    },
+    "risotto-porcini": {
+      "name": "Risotto ai porcini",
+      "description": "Carnaroli-Reis, Steinpilze, Butter und Parmesan"
+    },
+    "saltimbocca": {
+      "name": "Saltimbocca alla romana",
+      "description": "Kalbfleisch, Rohschinken und Salbei, Weißweinsauce, Ofenkartoffeln"
+    },
+    "branzino": {
+      "name": "Branzino al forno",
+      "description": "Ganzer Wolfsbarsch aus dem Ofen mit Zitrone, Kräutern und Saisongemüse"
+    },
+    "parmigiana": {
+      "name": "Parmigiana di melanzane",
+      "description": "Aubergine, Tomate, Mozzarella und Parmesan, goldbraun überbacken"
+    },
+    "margherita": {
+      "name": "Margherita",
+      "description": "San-Marzano-Tomaten, Fior di Latte, Basilikum"
+    },
+    "diavola": {
+      "name": "Diavola",
+      "description": "Tomate, Mozzarella, scharfe Salami, Peperoncino"
+    },
+    "tiramisu": {
+      "name": "Tiramisù",
+      "description": "Der Klassiker mit Mascarpone, Löffelbiskuit und Kaffee"
+    },
+    "panna-cotta": {
+      "name": "Panna cotta",
+      "description": "Vanille-Panna-cotta mit Beerensauce"
+    },
+    "aperol-spritz": {
+      "name": "Aperol Spritz",
+      "description": "Aperol, Prosecco, Soda und eine Orangenscheibe"
+    },
+    "vino-della-casa": {
+      "name": "Hauswein (0,2 l)",
+      "description": "Rot oder weiß, fragen Sie gern unser Team"
+    },
+    "espresso": { "name": "Espresso", "description": "Mischung aus einer kleinen Rösterei" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "tagline": "Honest Italian cooking in the heart of Munich",
+  "seoDescription": "Trattoria da Marco in Munich: fresh pasta, pizza and Italian classics. Browse the menu and request a table online.",
+  "hero": {
+    "title": "Pasta like Marco's grandmother made it",
+    "subtitle": "Fresh pasta, Roman classics and a glass of wine at a set table.",
+    "imageAlt": "A laid table with a checked tablecloth, plate, cutlery and a glass of wine"
+  },
+  "about": {
+    "title": "A table for everyone",
+    "paragraphs": [
+      "Marco cooks what he grew up eating: pasta made fresh every morning, sauces that simmer for hours and ingredients he is happy to taste himself.",
+      "Whether it is a quick lunch or a long evening with friends, there is a seat for you. The menu is also on every table, just scan the QR code."
+    ]
+  }
+}

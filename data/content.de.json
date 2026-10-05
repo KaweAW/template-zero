@@ -1,0 +1,16 @@
+{
+  "tagline": "Ehrliche italienische Küche im Herzen von München",
+  "seoDescription": "Trattoria da Marco in München: frische Pasta, Pizza und italienische Klassiker. Speisekarte ansehen und online einen Tisch anfragen.",
+  "hero": {
+    "title": "Pasta wie bei Marcos Nonna",
+    "subtitle": "Frische Pasta, römische Klassiker und ein Glas Wein am gedeckten Tisch.",
+    "imageAlt": "Gedeckter Tisch mit karierter Tischdecke, Teller, Besteck und einem Glas Wein"
+  },
+  "about": {
+    "title": "Ein Tisch für alle",
+    "paragraphs": [
+      "Marco kocht, was er von zu Hause kennt: Pasta, die jeden Morgen frisch gemacht wird, Saucen, die lange köcheln, und Zutaten, die er selbst gern probiert.",
+      "Ob schnelles Mittagessen oder langer Abend mit Freunden: Bei uns findet jeder einen Platz. Die Speisekarte gibt es auch am Tisch, einfach den QR-Code scannen."
+    ]
+  }
+}

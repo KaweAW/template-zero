@@ -1,0 +1,16 @@
+{
+  "tagline": "Cucina italiana sincera nel cuore di Monaco",
+  "seoDescription": "Trattoria da Marco a Monaco di Baviera: pasta fresca, pizza e classici italiani. Guarda il menu e richiedi un tavolo online.",
+  "hero": {
+    "title": "La pasta come la faceva la nonna di Marco",
+    "subtitle": "Pasta fresca, classici romani e un bicchiere di vino a tavola apparecchiata.",
+    "imageAlt": "Tavola apparecchiata con tovaglia a quadri, piatto, posate e un bicchiere di vino"
+  },
+  "about": {
+    "title": "Un tavolo per tutti",
+    "paragraphs": [
+      "Marco cucina quello che ha sempre mangiato a casa: pasta fatta fresca ogni mattina, sughi che cuociono per ore e ingredienti che assaggia volentieri lui per primo.",
+      "Che sia un pranzo veloce o una lunga serata tra amici, qui c'è posto per tutti. Il menu è anche sul tavolo: basta inquadrare il codice QR."
+    ]
+  }
+}

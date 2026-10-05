@@ -1,0 +1,79 @@
+{
+  "note": "Prezzi in euro, IVA inclusa. Per allergie o intolleranze chiedi al nostro staff.",
+  "categories": {
+    "antipasti": "Antipasti",
+    "primi": "Primi",
+    "secondi": "Secondi",
+    "pizze": "Pizze",
+    "dolci": "Dolci",
+    "bevande": "Bevande"
+  },
+  "items": {
+    "bruschetta": {
+      "name": "Bruschetta al pomodoro",
+      "description": "Pane tostato, pomodorini, basilico e olio extravergine"
+    },
+    "burrata": { "name": "Burrata", "description": "Burrata pugliese, pomodori maturi, basilico" },
+    "carpaccio": {
+      "name": "Carpaccio di manzo",
+      "description": "Manzo crudo a fettine sottili, rucola, scaglie di parmigiano"
+    },
+    "calamari-fritti": {
+      "name": "Calamari fritti",
+      "description": "Anelli di calamaro in pastella leggera, limone"
+    },
+    "cacio-e-pepe": {
+      "name": "Spaghetti cacio e pepe",
+      "description": "Pecorino romano e pepe nero, niente altro"
+    },
+    "tagliatelle-ragu": {
+      "name": "Tagliatelle al ragù",
+      "description": "Pasta all'uovo fatta in casa, ragù di manzo cotto per tre ore"
+    },
+    "gnocchi-gorgonzola": {
+      "name": "Gnocchi al gorgonzola",
+      "description": "Gnocchi di patate, crema di gorgonzola, noci"
+    },
+    "risotto-porcini": {
+      "name": "Risotto ai porcini",
+      "description": "Riso carnaroli, funghi porcini, burro e parmigiano"
+    },
+    "saltimbocca": {
+      "name": "Saltimbocca alla romana",
+      "description": "Vitello, prosciutto crudo e salvia, vino bianco, patate al forno"
+    },
+    "branzino": {
+      "name": "Branzino al forno",
+      "description": "Branzino intero al forno con limone, erbe e verdure di stagione"
+    },
+    "parmigiana": {
+      "name": "Parmigiana di melanzane",
+      "description": "Melanzane, pomodoro, mozzarella e parmigiano, gratinata al forno"
+    },
+    "margherita": {
+      "name": "Margherita",
+      "description": "Pomodoro San Marzano, fior di latte, basilico"
+    },
+    "diavola": {
+      "name": "Diavola",
+      "description": "Pomodoro, mozzarella, salame piccante, peperoncino"
+    },
+    "tiramisu": {
+      "name": "Tiramisù",
+      "description": "Il classico con mascarpone, savoiardi e caffè"
+    },
+    "panna-cotta": {
+      "name": "Panna cotta",
+      "description": "Panna cotta alla vaniglia con coulis di frutti di bosco"
+    },
+    "aperol-spritz": {
+      "name": "Aperol Spritz",
+      "description": "Aperol, prosecco, soda e una fetta d'arancia"
+    },
+    "vino-della-casa": {
+      "name": "Vino della casa (0,2 l)",
+      "description": "Rosso o bianco, chiedi al cameriere"
+    },
+    "espresso": { "name": "Caffè espresso", "description": "Miscela di torrefazione artigianale" }
+  }
+}
