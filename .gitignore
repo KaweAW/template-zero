@@ -10,3 +10,8 @@ next-env.d.ts
 playwright-report
 test-results
 .DS_Store
+
+# Lighthouse reports
+*.report.html
+*.report.json
+.lighthouseci
