@@ -9,20 +9,20 @@ Version 1.0, 5 October 2026.
 
 ## 1. Status at a glance
 
-| Area                                   | State                                                                |
-| -------------------------------------- | -------------------------------------------------------------------- |
-| Scaffold, config system, 4 languages   | Done. `next build` passes, 25 static pages.                          |
-| Pages: home, menu, reserve, contact    | Done. Plus a sales-demo `case-study` page.                           |
-| Demo "Trattoria da Marco, Munich"      | Done, in de / en / it / fr.                                          |
-| Unit tests                             | 22 tests, all passing (`npm run test:unit`).                         |
-| Content validation, QR generation      | Done (`npm run validate`, `npm run qr`).                             |
-| End-to-end tests (Playwright)          | **Written, never run.** No browser could be installed in my sandbox. |
-| Lighthouse score                       | **Not measured.** Same reason. See section 3.                        |
-| Visual check on a real phone / browser | **Not done.** I only inspected the generated HTML.                   |
-| Booking emails through Resend          | Code complete, **never run against a real API key.**                 |
+| Area                                   | State                                                                           |
+| -------------------------------------- | ------------------------------------------------------------------------------- |
+| Scaffold, config system, 4 languages   | Done. `next build` passes, 25 static pages.                                     |
+| Pages: home, menu, reserve, contact    | Done. Plus a sales-demo `case-study` page.                                      |
+| Demo "Trattoria da Marco, Munich"      | Done, in de / en / it / fr.                                                     |
+| Unit tests                             | 22 tests, all passing (`npm run test:unit`).                                    |
+| Content validation, QR generation      | Done (`npm run validate`, `npm run qr`).                                        |
+| End-to-end tests (Playwright)          | **24 / 24 passing** (12 tests x mobile and desktop), run by Kawe on 2026-10-05. |
+| Lighthouse score                       | Measured on 2026-10-05, see "Measured results" below.                           |
+| Visual check on a real phone / browser | **Not done.** I only inspected the generated HTML.                              |
+| Booking emails through Resend          | Code complete, **never run against a real API key.**                            |
 
-Please run the three "not verified" items on your machine before showing this to a prospect
-(commands are in the README, "Checks before you show it to anyone").
+Still open before showing this to a prospect: a visual pass on a real phone, a real Resend send,
+and PageSpeed Insights on the deployed site (commands are in the README).
 
 ---
 
@@ -73,11 +73,32 @@ You can have both only with a different approach. Options:
 
 Tell me which you prefer. It is a one-file change in `components/forms/ReservationForm.tsx`.
 
-**Not measured: Lighthouse, LCP, INP, CLS.** The sandbox could not download Chromium. What I did
-to make the targets likely: static pages, one `priority` hero image with a reserved box (no layout
-shift), `next/font` with size-adjusted fallbacks, the open/closed badge renders an empty box of
-fixed height on the server, and almost no JavaScript beyond the framework. "Likely" is not
-"measured". Run Lighthouse on a production build before quoting any number to a client.
+**Measured results (Lighthouse 13, mobile preset, local production build, 2026-10-05).**
+
+| Category       | `/de`                         |
+| -------------- | ----------------------------- |
+| Performance    | 98                            |
+| Accessibility  | 100                           |
+| Best Practices | 96 -> 100 after the fix below |
+| SEO            | 92 -> 100 after the fix below |
+
+Lab metrics on `/de`: FCP 0.8 s, Speed Index 0.8 s, TBT 50 ms, CLS 0, **LCP 2.4 s**. The LCP target
+(< 1.5 s) is **not met in the lab**. Lighthouse simulates slow 4G and a 4x slower CPU, and the
+LCP element is the hero image (breakdown: TTFB 458 ms, load delay 694 ms, load time 204 ms,
+render delay 1048 ms). Field numbers on Vercel (CDN, cached optimised image) will differ: measure
+with PageSpeed Insights after the first deploy before quoting any figure to a client.
+
+Two failures were artefacts of testing on `localhost`, not bugs:
+
+- **SEO `canonical`**: canonical and hreflang URLs are built from `siteUrl`
+  (`https://trattoria-da-marco.example` in the demo). Lighthouse compares them with the page it is
+  testing on `localhost`. With `siteUrl` temporarily set to `http://localhost:3000` the audit passes.
+  On the real domain, with `siteUrl` equal to it, it passes too. Nothing to change in the code.
+- **Best Practices `errors-in-console`**: `@vercel/analytics` requested `/_vercel/insights/script.js`,
+  which only exists on Vercel (404 elsewhere). Fixed: the component is now rendered only when
+  `process.env.VERCEL === '1'` (see `app/[locale]/layout.tsx`).
+
+Re-run with both applied (siteUrl = localhost): 98 / 100 / 100 / 100.
 
 ---
 
