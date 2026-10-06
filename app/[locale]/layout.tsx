@@ -60,10 +60,13 @@ export default async function LocaleLayout({
   const t = await getTranslations({ locale, namespace: 'common' });
   const { analytics } = siteConfig;
 
-  // Only loaded when switched on in data/config.json.
-  const VercelAnalytics = analytics.vercel
-    ? (await import('@vercel/analytics/next')).Analytics
-    : null;
+  // Only loaded when switched on in data/config.json AND the site is built on Vercel.
+  // Elsewhere (local production build, other hosts) /_vercel/insights/script.js does not
+  // exist: the request would 404 and log a console error.
+  const VercelAnalytics =
+    analytics.vercel && process.env.VERCEL === '1'
+      ? (await import('@vercel/analytics/next')).Analytics
+      : null;
 
   return (
     <html
