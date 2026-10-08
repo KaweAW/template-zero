@@ -37,6 +37,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "validate": "tsx scripts/validate-content.ts",
     "qr": "tsx scripts/generate-qr.ts",
     "placeholders": "tsx scripts/generate-placeholders.ts",

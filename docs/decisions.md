@@ -283,6 +283,40 @@ The code is **source-available** under the PolyForm Noncommercial License 1.0.0 
 The choice of licence is a business decision and not legal advice; have it reviewed before relying
 on it in a contract.
 
+### 4.14 Continuous integration
+
+`.github/workflows/ci.yml` runs on every pull request and on pushes to `main`:
+
+- **Checks (Node 20, Node 22)**: `validate`, `typecheck`, `lint`, `format:check`, unit tests and the
+  production build. Running both Node versions backs up the `engines` field in `package.json`
+  (Node 20.9 or newer).
+- **E2E (Playwright)**: installs Chromium, builds the site and runs the 24 end-to-end tests on a
+  mobile and a desktop profile. Traces of failed tests are kept as an artifact for 7 days.
+- Not included: Lighthouse. Scores depend on the machine, so a threshold in CI would be flaky; the
+  measurement stays a manual step before delivery (see the README).
+- Action versions are pinned to major tags. Dependabot for `github-actions` and `npm` is a
+  sensible next step (see open points).
+
+### 4.15 Scope: no admin area, no database
+
+The template stays a static site: all content is JSON in the repository, validated at build time
+(4.1). It has no login, no database and no editing interface, on purpose:
+
+- Nothing to secure, back up or pay for besides hosting.
+- Pages are prerendered, which is what keeps the performance numbers in section 3.
+- A change goes through Git, so it is reviewed, reversible and rebuilt by CI.
+
+Menu updates by a non-technical owner are handled by the maintainer under the service plan, by
+editing the file in the GitHub web editor, or, if a client truly needs self-service, by adding a
+Git-based CMS or a spreadsheet-to-deploy-hook flow on a per-client basis.
+
+An **offline copy of the menu** through a service worker was considered and left out. The menu is
+already static HTML that works without JavaScript, and a cache adds a risk the template should not
+carry by default: guests seeing outdated prices or allergen information. If a venue has no signal
+at the tables, add it for that client with a cache version tied to each deploy, a network-first
+strategy and a visible "last updated" time. The README lists these ideas under "Possible
+extensions".
+
 ---
 
 ## 5. Open points
@@ -298,7 +332,8 @@ on it in a contract.
    cannot belong to a real person.
 8. **Content Security Policy**: only `X-Frame-Options` and `Permissions-Policy` are set today; a CSP
    is a possible hardening step.
-9. **Languages beyond four** (nl, sv, da): add messages, data files and `i18n/pathnames.ts` entries
-   (README, "Add a language"). About an hour per language, mostly translation.
-10. **Not built, on purpose**: online ordering and payments, table management, a CMS. Data is JSON
+9. **Dependabot** for npm and GitHub Actions updates.
+10. **Languages beyond four** (nl, sv, da): add messages, data files and `i18n/pathnames.ts` entries
+    (README, "Add a language"). About an hour per language, mostly translation.
+11. **Not built, on purpose**: online ordering and payments, table management, a CMS. Data is JSON
     now and shaped so it can move to Sanity, Payload or Supabase later.
