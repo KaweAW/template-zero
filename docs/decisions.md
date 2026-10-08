@@ -283,6 +283,20 @@ The code is **source-available** under the PolyForm Noncommercial License 1.0.0 
 The choice of licence is a business decision and not legal advice; have it reviewed before relying
 on it in a contract.
 
+### 4.14 Continuous integration
+
+`.github/workflows/ci.yml` runs on every pull request and on pushes to `main`:
+
+- **Checks (Node 20, Node 22)**: `validate`, `typecheck`, `lint`, `format:check`, unit tests and the
+  production build. Running both Node versions backs up the `engines` field in `package.json`
+  (Node 20.9 or newer).
+- **E2E (Playwright)**: installs Chromium, builds the site and runs the 24 end-to-end tests on a
+  mobile and a desktop profile. Traces of failed tests are kept as an artifact for 7 days.
+- Not included: Lighthouse. Scores depend on the machine, so a threshold in CI would be flaky; the
+  measurement stays a manual step before delivery (see the README).
+- Action versions are pinned to major tags. Dependabot for `github-actions` and `npm` is a
+  sensible next step (see open points).
+
 ---
 
 ## 5. Open points
@@ -298,7 +312,8 @@ on it in a contract.
    cannot belong to a real person.
 8. **Content Security Policy**: only `X-Frame-Options` and `Permissions-Policy` are set today; a CSP
    is a possible hardening step.
-9. **Languages beyond four** (nl, sv, da): add messages, data files and `i18n/pathnames.ts` entries
-   (README, "Add a language"). About an hour per language, mostly translation.
-10. **Not built, on purpose**: online ordering and payments, table management, a CMS. Data is JSON
+9. **Dependabot** for npm and GitHub Actions updates.
+10. **Languages beyond four** (nl, sv, da): add messages, data files and `i18n/pathnames.ts` entries
+    (README, "Add a language"). About an hour per language, mostly translation.
+11. **Not built, on purpose**: online ordering and payments, table management, a CMS. Data is JSON
     now and shaped so it can move to Sanity, Payload or Supabase later.

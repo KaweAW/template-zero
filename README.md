@@ -1,5 +1,7 @@
 # Template Zero
 
+[![CI](https://github.com/KaweAW/template-zero/actions/workflows/ci.yml/badge.svg)](https://github.com/KaweAW/template-zero/actions/workflows/ci.yml)
+
 An ultra-fast, multilingual website plus QR table menu for restaurants, bars and cafes.
 Built with Next.js 15 (App Router, strict TypeScript), Tailwind CSS 4, next-intl, React Hook Form + Zod,
 Resend and Vercel. The demo client is **Trattoria da Marco, Munich** (languages: de, en, it, fr).
@@ -32,6 +34,7 @@ logged to the console and the guest sees the success screen.
 | `npm run build`        | Production build (all pages are static)                                 |
 | `npm run start`        | Serve the production build                                              |
 | `npm run validate`     | Validate all `data/*.json` files, translations, colour contrast, images |
+| `npm run format:check` | Fail if any file is not formatted with Prettier                         |
 | `npm run typecheck`    | `tsc --noEmit`                                                          |
 | `npm run lint`         | ESLint                                                                  |
 | `npm run test:unit`    | Unit tests (opening-hours logic, reservation validation)                |
