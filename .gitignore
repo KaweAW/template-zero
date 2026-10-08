@@ -15,3 +15,6 @@ test-results
 *.report.html
 *.report.json
 .lighthouseci
+
+# Intermediate mobile screenshots (only used to compose docs/screenshots/overview.webp)
+docs/screenshots/*-mobile.webp
