@@ -3,6 +3,33 @@
   "version": "1.0.0",
   "private": true,
   "description": "Ultra-fast, multilingual website + QR table menu template for restaurants, bars and cafes.",
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "next-intl",
+    "i18n",
+    "restaurant",
+    "qr-menu",
+    "website-template"
+  ],
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": {
+    "name": "Kawe Longon",
+    "url": "https://github.com/KaweAW"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaweAW/template-zero.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KaweAW/template-zero/issues"
+  },
+  "homepage": "https://github.com/KaweAW/template-zero#readme",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
