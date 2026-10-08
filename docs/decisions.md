@@ -97,6 +97,23 @@ element is the hero image (breakdown: TTFB 458 ms, load delay 694 ms, load time 
 delay 1048 ms). Field numbers on Vercel (CDN, cached optimised image) will differ: measure with
 PageSpeed Insights after the first deploy before quoting any figure to a client.
 
+**Deployed demo (Vercel, 2026-10-08).** Lighthouse mobile on `https://template-zero.vercel.app/de`,
+Chrome DevTools, incognito window (no extensions): 100 / 100 / 100 / 100 on two consecutive runs.
+First (cold) run: FCP 0.9 s, LCP 1.5 s, TBT 20 ms, CLS 0, Speed Index 0.9 s. Second run (cached
+image): FCP 0.3 s, LCP 0.5 s, TBT 0 ms, CLS 0. The LCP target is therefore met on the live site, at
+the limit on a cold cache. Two lessons:
+
+- Browser extensions distort Lighthouse. With extensions on, the same page scored 68 and 88
+  (TBT 2,380 ms and 290 ms, "2,404 KiB unused JavaScript" that is not ours) and Lighthouse printed a
+  warning about it. Always audit in incognito.
+- Lighthouse reported "fetchpriority=high should be applied" on the hero photo. Next 15's `priority`
+  prop does not render that attribute by itself, so `Hero.tsx` now sets `fetchPriority="high"`
+  explicitly (checked in the built HTML, on the `<img>` and on its preload link). The runs above were
+  taken before this fix, so the cold-cache LCP may improve a little. Re-measure after it is deployed.
+
+These are lab numbers from one machine and location. Field data (INP in particular) needs real
+visitors, e.g. the Vercel Speed Insights or the Chrome UX Report once the site has traffic.
+
 Two failures were artefacts of testing on `localhost`, not bugs:
 
 - **SEO `canonical`**: canonical and hreflang URLs are built from `siteUrl`

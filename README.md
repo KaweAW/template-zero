@@ -165,14 +165,20 @@ on a matt surface. Details are in the checklist.
 
 ## Check before you show it to anyone
 
-Already done on the demo (2026-10-05): unit tests (22), e2e tests (24 on mobile and desktop),
-Lighthouse mobile on `/de` (98 / 100 / 100 / 100 once `siteUrl` matches the tested host; see
-`docs/decisions.md`). Still to do for **every** client:
+Already done on the demo: unit tests (29), e2e tests (24 on mobile and desktop) and Lighthouse
+mobile on the deployed site (`/de`, Chrome DevTools, incognito window, 2026-10-08):
+
+| Performance | Accessibility | Best Practices | SEO | LCP         | TBT       | CLS |
+| ----------- | ------------- | -------------- | --- | ----------- | --------- | --- |
+| 100         | 100           | 100            | 100 | 0.5 - 1.5 s | 0 - 20 ms | 0   |
+
+Run Lighthouse in an incognito window: browser extensions can lower the score a lot (the same page
+scored 68-88 with extensions on). Details are in `docs/decisions.md`. Still to do for **every** client:
 
 1. `npm run test:e2e` (first time: `npx playwright install chromium`).
 2. Lighthouse on mobile for `/<lang>` and `/<lang>/menu` (target 95+ in all four categories). Test with
    `siteUrl` set to the tested host, otherwise the `canonical` audit fails. Then PageSpeed Insights on the
-   deployed site (LCP < 1.5 s, INP < 150 ms, CLS < 0.05). The demo's lab LCP was 2.4 s.
+   deployed site (LCP < 1.5 s, INP < 150 ms, CLS < 0.05). Run it from an incognito window.
 3. A real booking sent through Resend, including the guest receipt.
 4. A visual pass on a real phone (iOS Safari and Android Chrome).
 

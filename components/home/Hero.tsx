@@ -33,6 +33,7 @@ export async function Hero({ locale }: { locale: Locale }) {
         alt={content.hero.imageAlt}
         fill
         priority
+        fetchPriority="high"
         quality={60}
         sizes="100vw"
         className="-z-20 object-cover"
