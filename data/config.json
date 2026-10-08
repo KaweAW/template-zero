@@ -1,7 +1,7 @@
 {
   "name": "Trattoria da Marco",
   "type": "Restaurant",
-  "siteUrl": "https://trattoria-da-marco.example",
+  "siteUrl": "https://template-zero.vercel.app",
   "locales": ["de", "en", "it", "fr"],
   "defaultLocale": "de",
   "currency": "EUR",
@@ -21,8 +21,8 @@
     "og": "/images/og.jpg"
   },
   "contact": {
-    "phone": "+49 89 123456",
-    "whatsapp": "+4915112345678",
+    "phone": "+49 89 99998 123",
+    "whatsapp": "+4915228817386",
     "email": "info@trattoria-da-marco.example",
     "address": {
       "street": "Musterstraße 12",

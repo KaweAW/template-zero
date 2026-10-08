@@ -325,11 +325,13 @@ extensions".
 2. **Case study**: keep the "Sample data" notice until real numbers exist (4.9).
 3. **Real Resend account**: a verified sending domain is needed before the form can email anyone.
 4. **Redis for rate limiting**: create an Upstash database for each live site (4.6).
-5. **Domain**: `siteUrl` is `trattoria-da-marco.example`. The QR codes and sitemap use it; run
-   `npm run qr` again after setting the real one.
+5. **Domain**: `siteUrl` is the Vercel demo address (`template-zero.vercel.app`). The QR codes and
+   sitemap use it; for each client set the real domain and run `npm run qr` again.
 6. **Impressum and privacy policy** for each German-speaking client (4.10).
-7. **Demo contact details**: replace the placeholder phone and WhatsApp numbers with numbers that
-   cannot belong to a real person.
+7. **Demo contact details**: done. The demo phone (`+49 89 99998 123`) and WhatsApp
+   (`+49 152 28817386`) numbers are taken from the ranges the German regulator reserves for fiction,
+   so they cannot ring a real person. The WhatsApp link therefore does not open a real chat;
+   test that flow with your own number on a private deployment, never on the public demo.
 8. **Content Security Policy**: only `X-Frame-Options` and `Permissions-Policy` are set today; a CSP
    is a possible hardening step.
 9. **Dependabot** for npm and GitHub Actions updates.
