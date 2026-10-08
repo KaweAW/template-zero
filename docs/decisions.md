@@ -297,6 +297,26 @@ on it in a contract.
 - Action versions are pinned to major tags. Dependabot for `github-actions` and `npm` is a
   sensible next step (see open points).
 
+### 4.15 Scope: no admin area, no database
+
+The template stays a static site: all content is JSON in the repository, validated at build time
+(4.1). It has no login, no database and no editing interface, on purpose:
+
+- Nothing to secure, back up or pay for besides hosting.
+- Pages are prerendered, which is what keeps the performance numbers in section 3.
+- A change goes through Git, so it is reviewed, reversible and rebuilt by CI.
+
+Menu updates by a non-technical owner are handled by the maintainer under the service plan, by
+editing the file in the GitHub web editor, or, if a client truly needs self-service, by adding a
+Git-based CMS or a spreadsheet-to-deploy-hook flow on a per-client basis.
+
+An **offline copy of the menu** through a service worker was considered and left out. The menu is
+already static HTML that works without JavaScript, and a cache adds a risk the template should not
+carry by default: guests seeing outdated prices or allergen information. If a venue has no signal
+at the tables, add it for that client with a cache version tied to each deploy, a network-first
+strategy and a visible "last updated" time. The README lists these ideas under "Possible
+extensions".
+
 ---
 
 ## 5. Open points

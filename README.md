@@ -175,6 +175,29 @@ Lighthouse mobile on `/de` (98 / 100 / 100 / 100 once `siteUrl` matches the test
 and contains no invented testimonials. Replace it with real numbers from a real client, or turn it off with
 `features.caseStudy: false`.
 
+## Possible extensions
+
+Template Zero is deliberately a static site with no database, no login and no admin area: it stays
+fast, cheap to host and easy to hand over. These are ideas for clients who need more. None of them is
+included, and each one has a cost.
+
+- **Menu editing without Git.** Prices live in `data/menu.json`, so anyone can already edit that file
+  in the GitHub web editor (it works from a phone) and the site is live about a minute after saving.
+  For owners who change prices often, a Git-based CMS such as Decap CMS or Pages CMS gives them a form
+  on top of the same file, with no database. A Google Sheet or Airtable that triggers a Vercel deploy
+  hook is another route. Each adds an account to manage and a place where mistakes can be made, so
+  most clients are better served by the maintainer making the change as part of the monthly plan.
+- **Offline menu.** The menu is already plain static HTML and works without JavaScript. A service
+  worker could keep the last copy for venues with poor reception (cellars, thick walls). The risk is
+  a **stale price or allergen note** shown to a guest, so it needs a cache tied to each deploy, a
+  network-first strategy and a visible "last updated" time. Worth it only where the signal is
+  really bad.
+- **Table numbers in the QR code.** Add `?table=12` to the QR address and read it on the menu page,
+  for analytics or a future ordering flow.
+- **Online ordering or payments, table management.** A different product; integrate a specialised
+  service rather than build it into the template.
+- **More languages.** See "Add a language".
+
 ## Licence
 
 Template Zero is released under the [PolyForm Noncommercial License 1.0.0](LICENSE).
