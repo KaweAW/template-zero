@@ -41,6 +41,7 @@
     "validate": "tsx scripts/validate-content.ts",
     "qr": "tsx scripts/generate-qr.ts",
     "placeholders": "tsx scripts/generate-placeholders.ts",
+    "screenshots": "tsx scripts/take-screenshots.ts",
     "test:unit": "tsx --test tests/unit/*.test.ts",
     "test:e2e": "playwright test",
     "analyze": "ANALYZE=true next build",
