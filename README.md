@@ -96,9 +96,9 @@ changes, because it points to the stable URL `/menu?src=qr`, which redirects to 
 
 ## Reservations
 
-Two modes, set in `config.reservation.mode`: `email`, `whatsapp` or `both`.
+Two modes, set in `config.reservation.mode`: `form`, `whatsapp` or `both`.
 
-- **Email**: the form calls a Server Action (`app/actions/reserve.ts`). It checks a honeypot, re-validates
+- **Form**: the form calls a Server Action (`app/actions/reserve.ts`). It checks a honeypot, re-validates
   the slot against the opening hours, then sends the request to the restaurant through Resend. The guest
   can get a receipt copy.
 - **WhatsApp**: a deep link with a pre-filled message (needs `contact.whatsapp` in international format).
