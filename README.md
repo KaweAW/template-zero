@@ -105,14 +105,28 @@ Two modes, set in `config.reservation.mode`: `email`, `whatsapp` or `both`.
 
 Environment variables (see `.env.example`):
 
-| Variable                 | Purpose                                                                   |
-| ------------------------ | ------------------------------------------------------------------------- |
-| `RESEND_API_KEY`         | Resend API key                                                            |
-| `RESERVATION_FROM_EMAIL` | Sender, on a domain verified in Resend (SPF and DKIM)                     |
-| `RESERVATION_TO_EMAIL`   | Where requests arrive (defaults to `contact.email`)                       |
-| `RESERVATION_DRY_RUN`    | `true` logs instead of sending. Tests only. **Never set on a live site.** |
+| Variable                   | Purpose                                                                   |
+| -------------------------- | ------------------------------------------------------------------------- |
+| `RESEND_API_KEY`           | Resend API key                                                            |
+| `RESERVATION_FROM_EMAIL`   | Sender, on a domain verified in Resend (SPF and DKIM)                     |
+| `RESERVATION_TO_EMAIL`     | Where requests arrive (defaults to `contact.email`)                       |
+| `RESERVATION_DRY_RUN`      | `true` logs instead of sending. Tests only. **Never set on a live site.** |
+| `UPSTASH_REDIS_REST_URL`   | Optional. Redis for shared rate-limit counters (see below)                |
+| `UPSTASH_REDIS_REST_TOKEN` | Optional. Token for the Redis above                                       |
 
 In production without `RESEND_API_KEY` the form returns an error, so a booking is never lost silently.
+
+### Abuse protection
+
+The form can send email, so it is rate limited (`lib/rate-limit.ts`): 5 requests per visitor per 10
+minutes, and for guest receipts 2 per recipient address per hour and 50 per hour for the whole site.
+Limits only count requests that passed validation, and never apply in dry-run. IP addresses and emails
+are hashed before they are stored.
+
+On a live site, set `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` (a free Upstash database is
+enough) so the counters are shared by every serverless instance. Without them an in-memory fallback is
+used: it slows a simple script down, but each server instance counts on its own. Set
+`reservation.sendCustomerConfirmation` to `false` if you do not want receipts sent at all.
 
 ## Deploy on Vercel
 

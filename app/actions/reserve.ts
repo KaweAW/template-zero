@@ -1,9 +1,11 @@
 'use server';
 
+import { headers } from 'next/headers';
 import { getTranslations } from 'next-intl/server';
 import { Resend } from 'resend';
 import { siteConfig } from '@/lib/config';
 import { formatBookingDate } from '@/lib/format';
+import { checkRateLimit, RATE_LIMITS } from '@/lib/rate-limit';
 import { getBookableSlots } from '@/lib/reservation';
 import { createReservationSchema, type ReservationInput } from '@/lib/reservation-schema';
 import type { Locale } from '@/types';
@@ -17,6 +19,12 @@ export type ReservationResult =
     };
 
 const oneLine = (value: string) => value.replace(/[\r\n]+/g, ' ').trim();
+
+/** Best-effort client address. On Vercel the platform sets these headers itself. */
+async function clientAddress(): Promise<string> {
+  const h = await headers();
+  return h.get('x-real-ip') ?? h.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
+}
 
 async function compose(locale: Locale, data: ReservationInput) {
   const [t, tr] = await Promise.all([
@@ -77,6 +85,13 @@ export async function submitReservation(input: unknown): Promise<ReservationResu
     return { ok: false };
   }
 
+  // Limits only apply when an email is really about to be sent (never in dry-run), and only to
+  // requests that already passed validation, so typos do not use up a visitor's allowance.
+  if (!(await checkRateLimit('ip', await clientAddress(), RATE_LIMITS.perIp))) {
+    console.warn('[reservation] Rate limit reached for one client, request refused.');
+    return { ok: false };
+  }
+
   const resend = new Resend(apiKey);
 
   // 1. Email to the restaurant, in the restaurant's language.
@@ -109,7 +124,13 @@ export async function submitReservation(input: unknown): Promise<ReservationResu
 
   // 2. Optional confirmation of receipt to the guest, in the guest's language.
   //    A failure here must not turn a successful request into an error.
-  if (reservation.sendCustomerConfirmation && data.email) {
+  //    Limited per recipient and for the whole site, so the form cannot be used to mail strangers.
+  if (
+    reservation.sendCustomerConfirmation &&
+    data.email &&
+    (await checkRateLimit('receipt-to', data.email, RATE_LIMITS.perGuestEmail)) &&
+    (await checkRateLimit('receipt-all', 'site', RATE_LIMITS.allGuestReceipts))
+  ) {
     try {
       const guest = await compose(data.locale, data);
       const result = await resend.emails.send({
