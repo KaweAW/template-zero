@@ -4,6 +4,8 @@ An ultra-fast, multilingual website plus QR table menu for restaurants, bars and
 Built with Next.js 15 (App Router, strict TypeScript), Tailwind CSS 4, next-intl, React Hook Form + Zod,
 Resend and Vercel. The demo client is **Trattoria da Marco, Munich** (languages: de, en, it, fr).
 
+> Source-available under the [PolyForm Noncommercial 1.0.0](LICENSE) licence. See [Licence](#licence).
+
 Everything that differs between clients lives in `data/` (JSON) and `public/images/`. You should not
 need to touch code for a normal client.
 
@@ -94,23 +96,37 @@ changes, because it points to the stable URL `/menu?src=qr`, which redirects to 
 
 ## Reservations
 
-Two modes, set in `config.reservation.mode`: `email`, `whatsapp` or `both`.
+Two modes, set in `config.reservation.mode`: `form`, `whatsapp` or `both`.
 
-- **Email**: the form calls a Server Action (`app/actions/reserve.ts`). It checks a honeypot, re-validates
+- **Form**: the form calls a Server Action (`app/actions/reserve.ts`). It checks a honeypot, re-validates
   the slot against the opening hours, then sends the request to the restaurant through Resend. The guest
   can get a receipt copy.
 - **WhatsApp**: a deep link with a pre-filled message (needs `contact.whatsapp` in international format).
 
 Environment variables (see `.env.example`):
 
-| Variable                 | Purpose                                                                   |
-| ------------------------ | ------------------------------------------------------------------------- |
-| `RESEND_API_KEY`         | Resend API key                                                            |
-| `RESERVATION_FROM_EMAIL` | Sender, on a domain verified in Resend (SPF and DKIM)                     |
-| `RESERVATION_TO_EMAIL`   | Where requests arrive (defaults to `contact.email`)                       |
-| `RESERVATION_DRY_RUN`    | `true` logs instead of sending. Tests only. **Never set on a live site.** |
+| Variable                   | Purpose                                                                   |
+| -------------------------- | ------------------------------------------------------------------------- |
+| `RESEND_API_KEY`           | Resend API key                                                            |
+| `RESERVATION_FROM_EMAIL`   | Sender, on a domain verified in Resend (SPF and DKIM)                     |
+| `RESERVATION_TO_EMAIL`     | Where requests arrive (defaults to `contact.email`)                       |
+| `RESERVATION_DRY_RUN`      | `true` logs instead of sending. Tests only. **Never set on a live site.** |
+| `UPSTASH_REDIS_REST_URL`   | Optional. Redis for shared rate-limit counters (see below)                |
+| `UPSTASH_REDIS_REST_TOKEN` | Optional. Token for the Redis above                                       |
 
 In production without `RESEND_API_KEY` the form returns an error, so a booking is never lost silently.
+
+### Abuse protection
+
+The form can send email, so it is rate limited (`lib/rate-limit.ts`): 5 requests per visitor per 10
+minutes, and for guest receipts 2 per recipient address per hour and 50 per hour for the whole site.
+Limits only count requests that passed validation, and never apply in dry-run. IP addresses and emails
+are hashed before they are stored.
+
+On a live site, set `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` (a free Upstash database is
+enough) so the counters are shared by every serverless instance. Without them an in-memory fallback is
+used: it slows a simple script down, but each server instance counts on its own. Set
+`reservation.sendCustomerConfirmation` to `false` if you do not want receipts sent at all.
 
 ## Deploy on Vercel
 
@@ -155,3 +171,21 @@ Lighthouse mobile on `/de` (98 / 100 / 100 / 100 once `siteUrl` matches the test
 `/case-study` uses **illustrative sample data** (`illustrative: true`), shows a visible notice, is `noindex`
 and contains no invented testimonials. Replace it with real numbers from a real client, or turn it off with
 `features.caseStudy: false`.
+
+## Licence
+
+Template Zero is released under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+It is **source-available**, not open source in the OSI sense.
+
+You may read, run, modify and share the code for noncommercial purposes: personal projects,
+learning, research, evaluation, teaching, and use by charitable, educational or public-interest
+organisations, as defined in the licence text.
+
+You may **not** use it commercially without a separate agreement. In particular, building or
+operating a website for a paying client, or reselling or hosting the template as a product or
+service, needs a commercial licence.
+
+**Commercial licensing:** kawe.longon@gmail.com
+
+Bundled fonts and other third-party material keep their own licences, see
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
