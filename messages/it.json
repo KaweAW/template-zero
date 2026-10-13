@@ -7,7 +7,8 @@
     "contact": "Contatti",
     "call": "Chiamaci",
     "whatsapp": "WhatsApp",
-    "whatsappPrefill": "Ciao {name}, vorrei informazioni per un tavolo."
+    "whatsappPrefill": "Ciao {name}, vorrei informazioni per un tavolo.",
+    "previewBanner": "Anteprima per {name} · testi, foto e menu di esempio"
   },
   "nav": {
     "main": "Navigazione principale",
@@ -39,7 +40,8 @@
     "fullMenu": "Menu completo",
     "visitTitle": "Passa a trovarci",
     "reserveBandTitle": "Vuoi venire a trovarci?",
-    "reserveBandText": "Inviaci una richiesta e ti confermiamo il tavolo."
+    "reserveBandText": "Inviaci una richiesta e ti confermiamo il tavolo.",
+    "reviewsLabel": "{rating} su 5 · {count, plural, one {# recensione Google} other {# recensioni Google}}"
   },
   "menu": {
     "title": "Menu",

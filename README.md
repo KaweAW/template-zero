@@ -237,3 +237,19 @@ service, needs a commercial licence.
 
 Bundled fonts and other third-party material keep their own licences, see
 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+
+## Sales previews (one site per prospect)
+
+Turn a prospect into a ready-to-show preview in two commands. Prospect data stays out of git
+(`leads/*.json`, `clients/` and `.preview/` are git-ignored).
+
+```bash
+cp leads/example.fr.json leads/my-venue.json   # edit: name, address, phone, e-mail, rating…
+npm run lead -- leads/my-venue.json            # writes clients/<slug>/data and prints warnings
+npm run preview -- <slug> --shots              # isolated build + mobile/desktop screenshots
+npm run preview -- <slug> --start              # or keep it running on http://localhost:3100
+```
+
+A preview shows the venue's real name, address, phone, e-mail, hours and Google rating (numbers
+only, never review text), plus clearly labelled sample text, photos and menu. It carries a banner,
+`noindex` and an empty sitemap. Set `CHROMIUM_PATH` if Playwright cannot find a browser.

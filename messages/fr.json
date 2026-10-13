@@ -7,7 +7,8 @@
     "contact": "Contact",
     "call": "Appeler",
     "whatsapp": "WhatsApp",
-    "whatsappPrefill": "Bonjour {name}, je voudrais des informations pour une table."
+    "whatsappPrefill": "Bonjour {name}, je voudrais des informations pour une table.",
+    "previewBanner": "Aperçu préparé pour {name} · textes, photos et carte d’exemple"
   },
   "nav": {
     "main": "Navigation principale",
@@ -39,7 +40,8 @@
     "fullMenu": "Toute la carte",
     "visitTitle": "Venez nous voir",
     "reserveBandTitle": "Envie de passer nous voir ?",
-    "reserveBandText": "Envoyez-nous une demande, nous confirmons votre table."
+    "reserveBandText": "Envoyez-nous une demande, nous confirmons votre table.",
+    "reviewsLabel": "{rating} sur 5 · {count, plural, one {# avis Google} other {# avis Google}}"
   },
   "menu": {
     "title": "Carte",

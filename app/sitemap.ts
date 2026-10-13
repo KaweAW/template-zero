@@ -12,6 +12,7 @@ const PAGES: { path: AppPathname; changeFrequency: 'weekly' | 'monthly'; priorit
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  if (siteConfig.preview?.enabled) return [];
   return PAGES.flatMap(({ path, changeFrequency, priority }) =>
     siteConfig.locales.map((locale) => ({
       url: absoluteUrl(localizedPath(locale, path)),
