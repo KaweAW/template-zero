@@ -6,6 +6,7 @@ import { hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
+import { PreviewBanner } from '@/components/layout/PreviewBanner';
 import { StickyCTA } from '@/components/layout/StickyCTA';
 import { getThemeVars } from '@/lib/color';
 import { siteConfig } from '@/lib/config';
@@ -34,6 +35,8 @@ export const metadata: Metadata = {
   applicationName: siteConfig.name,
   title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
   icons: { icon: '/favicon.svg' },
+  // Sales previews must never show up in search results.
+  robots: siteConfig.preview?.enabled ? { index: false, follow: false } : undefined,
 };
 
 export const viewport: Viewport = {
@@ -81,6 +84,7 @@ export default async function LocaleLayout({
         >
           {t('skipToContent')}
         </a>
+        {siteConfig.preview?.enabled ? <PreviewBanner locale={locale} /> : null}
         <Header locale={locale} />
         <main id="main" className="flex-1">
           {children}

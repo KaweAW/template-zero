@@ -7,7 +7,8 @@
     "contact": "Kontakt",
     "call": "Anrufen",
     "whatsapp": "WhatsApp",
-    "whatsappPrefill": "Hallo {name}, ich möchte gern einen Tisch anfragen."
+    "whatsappPrefill": "Hallo {name}, ich möchte gern einen Tisch anfragen.",
+    "previewBanner": "Vorschau für {name} · Beispieltexte, -fotos und -karte"
   },
   "nav": {
     "main": "Hauptnavigation",
@@ -39,7 +40,8 @@
     "fullMenu": "Ganze Speisekarte",
     "visitTitle": "Besuchen Sie uns",
     "reserveBandTitle": "Lust auf einen Besuch?",
-    "reserveBandText": "Schicken Sie uns eine Anfrage, wir bestätigen Ihren Tisch."
+    "reserveBandText": "Schicken Sie uns eine Anfrage, wir bestätigen Ihren Tisch.",
+    "reviewsLabel": "{rating} von 5 · {count, plural, one {# Google-Bewertung} other {# Google-Bewertungen}}"
   },
   "menu": {
     "title": "Speisekarte",

@@ -64,6 +64,6 @@ export function buildPageMetadata({
       images: [image],
     },
     twitter: { card: 'summary_large_image', title: shownTitle, description, images: [image.url] },
-    robots: noIndex ? { index: false, follow: false } : undefined,
+    robots: noIndex || siteConfig.preview?.enabled ? { index: false, follow: false } : undefined,
   };
 }

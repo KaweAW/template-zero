@@ -40,6 +40,8 @@
     "format:check": "prettier --check .",
     "validate": "tsx scripts/validate-content.ts",
     "qr": "tsx scripts/generate-qr.ts",
+    "lead": "tsx scripts/generate-lead.ts",
+    "preview": "tsx scripts/preview.ts",
     "placeholders": "tsx scripts/generate-placeholders.ts",
     "screenshots": "tsx scripts/take-screenshots.ts",
     "test:unit": "tsx --test tests/unit/*.test.ts",

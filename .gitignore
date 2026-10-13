@@ -18,3 +18,9 @@ test-results
 
 # Intermediate mobile screenshots (only used to compose docs/screenshots/overview.webp)
 docs/screenshots/*-mobile.webp
+
+# Sales previews and prospect data: private, never in the public repo
+.preview
+clients/
+leads/*.json
+!leads/example.fr.json

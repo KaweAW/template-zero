@@ -9,6 +9,7 @@ import { getHoursLabels } from '@/lib/labels';
 import { localizedPath } from '@/lib/links';
 import type { Locale } from '@/types';
 import { HoursStatus } from './HoursStatus';
+import { ReviewBadge } from './ReviewBadge';
 
 const step = (i: number) => ({ '--i': i }) as React.CSSProperties;
 
@@ -58,7 +59,12 @@ export async function Hero({ locale }: { locale: Locale }) {
         <p className="settle mt-5 max-w-xl text-lg text-white/90 md:text-xl" style={step(2)}>
           {content.hero.subtitle}
         </p>
-        <div className="settle mt-8 flex flex-wrap gap-3" style={step(3)}>
+        {siteConfig.reviews ? (
+          <div className="settle mt-6" style={step(3)}>
+            <ReviewBadge locale={locale} reviews={siteConfig.reviews} />
+          </div>
+        ) : null}
+        <div className="settle mt-8 flex flex-wrap gap-3" style={step(4)}>
           {reserve.external ? (
             <a
               href={reserve.href}

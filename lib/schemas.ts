@@ -18,7 +18,7 @@ const timeRange = z
   .refine((r) => r.open !== r.close, 'open and close must be different');
 
 /** A closing time earlier than the opening time means "after midnight" (e.g. 18:00 -> 01:00). */
-const hoursSchema = z.object({
+export const hoursSchema = z.object({
   mon: z.array(timeRange),
   tue: z.array(timeRange),
   wed: z.array(timeRange),
@@ -107,6 +107,23 @@ export const siteConfigSchema = z
       /** Sales demo page. Turn off for real client sites. */
       caseStudy: z.boolean(),
     }),
+    /**
+     * Rating shown on the home page, copied from Google Maps. Numbers only: never the text of a
+     * review, which Google's terms do not let you copy. It is deliberately NOT added to the
+     * JSON-LD, because search engines ignore (and may penalise) ratings taken from another site.
+     */
+    reviews: z
+      .object({
+        rating: z.number().min(1).max(5),
+        count: z.number().int().positive(),
+        url: z.url().optional(),
+      })
+      .optional(),
+    /**
+     * A sales preview built for a prospect: shows a banner saying the content is sample content
+     * and keeps search engines out. Remove it (or set enabled to false) for a real client site.
+     */
+    preview: z.object({ enabled: z.boolean() }).optional(),
   })
   .refine((c) => c.locales.includes(c.defaultLocale), {
     path: ['defaultLocale'],

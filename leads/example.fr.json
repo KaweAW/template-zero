@@ -1,0 +1,18 @@
+{
+  "name": "Chez Exemple",
+  "type": "Restaurant",
+  "cuisine": ["française", "bistrot"],
+  "locales": ["fr", "en"],
+  "address": {
+    "street": "12 rue de l'Exemple",
+    "postalCode": "69002",
+    "city": "Lyon",
+    "country": "FR"
+  },
+  "geo": { "lat": 45.764, "lng": 4.8357 },
+  "phone": "+33 4 00 00 00 00",
+  "whatsapp": "+33600000000",
+  "email": "contact@chez-exemple.example",
+  "reviews": { "rating": 4.7, "count": 312 },
+  "brandColor": "#7A1426"
+}

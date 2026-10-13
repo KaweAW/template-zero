@@ -7,7 +7,8 @@
     "contact": "Contact",
     "call": "Call us",
     "whatsapp": "WhatsApp",
-    "whatsappPrefill": "Hello {name}, I would like to ask about a table."
+    "whatsappPrefill": "Hello {name}, I would like to ask about a table.",
+    "previewBanner": "Preview prepared for {name} · sample text, photos and menu"
   },
   "nav": {
     "main": "Main navigation",
@@ -39,7 +40,8 @@
     "fullMenu": "Full menu",
     "visitTitle": "Come by",
     "reserveBandTitle": "Planning a visit?",
-    "reserveBandText": "Send us a request and we will confirm your table."
+    "reserveBandText": "Send us a request and we will confirm your table.",
+    "reviewsLabel": "{rating} out of 5 · {count, plural, one {# Google review} other {# Google reviews}}"
   },
   "menu": {
     "title": "Menu",
